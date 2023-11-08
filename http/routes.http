@@ -1,0 +1,42 @@
+GET http://localhost:3000/products HTTP/1.1
+###
+POST http://localhost:3000/products HTTP/1.1
+content-type: application/json
+
+    {
+        "name": "Hydranet Mois.",
+        "price": 499
+    }
+
+###
+GET http://localhost:3000/products/59277210084 HTTP/1.1
+
+###
+DELETE http://localhost:3000/products/398548926588 HTTP/1.1
+
+###
+PATCH http://localhost:3000/products/398548926588 HTTP/1.1 
+content-type: application/json
+
+{
+    "name": "Jio fibre",
+    "price": 8000
+}
+
+###
+POST http://localhost:3000/orders HTTP/1.1
+content-type: application/json
+
+    {
+        "productId": 1,
+        "qty": 8
+    }
+
+###
+GET http://localhost:3000/orders/793307 HTTP/1.1
+
+###
+GET http://localhost:3000/orders HTTP/1.1
+
+###
+DELETE http://localhost:3000/orders/842383 HTTP/1.1
